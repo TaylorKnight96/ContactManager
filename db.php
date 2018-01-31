@@ -1,9 +1,5 @@
 <?php
 
-		$con = mysqli_connect("localhost","root","okay","contacts");
-
-		if (mysqli_connect_errno())
-			{
-				echo "Failed to connect to MySQL: " . mysqli_connect_error();
-			}
+		$con = pg_connect("host=localhost port=5432 dbname=Small_Project") or die('connection failed');
+		return $con;
 ?>
